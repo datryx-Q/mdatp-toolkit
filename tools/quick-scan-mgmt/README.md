@@ -2,7 +2,7 @@
 
 ## Overview
 
-`mdatp-quick-scan-runner` is a production-ready Bash utility designed to safely trigger a Microsoft Defender for Endpoint (`mdatp`) quick scan on Linux systems.
+`mdatp-quick-scan` is a production-ready Bash utility designed to safely trigger a Microsoft Defender for Endpoint (`mdatp`) quick scan on Linux systems.
 
 Unlike a simple command wrapper, this tool includes:
 
