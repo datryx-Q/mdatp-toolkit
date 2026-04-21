@@ -1,0 +1,6 @@
+[Unit]
+Description=mdatp Quick Scan Runner Service
+
+[Service]
+Type=oneshot
+ExecStart=/opt/mdatp-toolkit/tools/mdatp-quick-scan-runner/mdatp-quick-scan.sh
