@@ -38,6 +38,7 @@ The goal of this toolkit is to provide:
 
 ## Repository Structure
 
+```
 mdatp-toolkit/
 ├── README.md
 ├── .gitignore
@@ -46,7 +47,7 @@ mdatp-toolkit/
 │ ├── run.sh
 │ ├── README.md
 │ └── examples/
-
+```
 
 ---
 
@@ -57,21 +58,32 @@ mdatp-toolkit/
 ```bash
 git clone https://github.com/<your-username>/mdatp-toolkit.git
 cd mdatp-toolkit
-Navigate to a tool:
+```
+
+2. Navigate to a tool:
+
+```bash
 cd tools/mdatp-quick-scan-runner
-Run the script:
+```
+
+3. Run the script:
+
+```bash
 chmod +x run.sh
 ./run.sh
-Requirements
-Linux system with mdatp installed
-Appropriate permissions to:
-Execute mdatp
-Write logs (default: /var/log/microsoft)
-Contributing
+```
+
+## Requirements
+
+- Linux system with `mdatp` installed  
+- Appropriate permissions to:
+  - Execute `mdatp`
+  - Write logs (default: `/var/log/microsoft`)
+
+## Contributing
 
 This repo is intended to grow into a broader toolkit. Contributions should:
 
-Follow existing structure
-Include clear documentation
-Provide meaningful logging and exit codes
-```
+- Follow existing structure  
+- Include clear documentation  
+- Provide meaningful logging and exit codes  
