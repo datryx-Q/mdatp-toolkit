@@ -1,4 +1,4 @@
-# mdatp-quick-scan-runner
+# mdatp-quick-scan
 
 ## Overview
 
