@@ -1,0 +1,10 @@
+# mdatp-quick-scan-runner
+# Example cron configuration
+
+# Run quick scan daily at 2:00 AM
+0 2 * * * /usr/local/bin/mdatp-quick-scan-runner/run.sh >> /var/log/microsoft/cron_mdatp_quick_scan.log 2>&1
+
+Notes:
+- Redirects stdout/stderr to a separate cron log
+- Keeps native tool log (mdatp_quick_scan.log) intact
+- Suitable for standalone or lightly managed systems
