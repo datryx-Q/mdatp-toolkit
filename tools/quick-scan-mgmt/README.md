@@ -17,11 +17,26 @@ This script is intended for use in **enterprise environments** where consistency
 
 ## Purpose
 
+Microsoft currently supports scheduling Microsoft Defender for Endpoint (mdatp) quick scans on Linux primarily through **cron-based scheduling**. This tool is designed to formalize and harden that approach while making it suitable for enterprise automation environments.
+
 Run a daily quick scan while ensuring:
 
-- The system is in a valid state to execute the scan
-- Failures are visible and actionable
-- Logs are captured for auditing and troubleshooting
+- The system is in a valid state to execute the scan  
+- Failures are visible and actionable through consistent exit codes and logging  
+- Logs are captured for auditing, troubleshooting, and operational visibility  
+- Execution aligns with Microsoft’s intended model for Linux-based scan scheduling  
+
+### Important Behavior Context
+
+- Quick scans are intended to run while **Real-Time Protection (RTP) mode is enabled**
+- This is by design and aligns with how Microsoft Defender for Endpoint operates on Linux
+- RTP and scheduled quick scans are complementary:
+  - RTP provides continuous protection
+  - Quick scans provide periodic verification and additional signal coverage
+- This tool assumes RTP is active and does not attempt to replace or disable it
+
+By enforcing this model, the tool supports the intended operational behavior of Microsoft Defender for Endpoint and ensures scanning activity remains consistent with Microsoft’s supported configuration patterns.
+Run a daily quick scan while ensuring:
 
 ---
 
