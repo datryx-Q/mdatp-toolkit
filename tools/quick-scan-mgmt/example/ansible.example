@@ -1,0 +1,18 @@
+---
+- name: Run mdatp quick scan across endpoints
+  hosts: linux_endpoints
+  become: yes
+
+  tasks:
+    - name: Execute mdatp quick scan runner
+      shell: /opt/mdatp-toolkit/tools/mdatp-quick-scan-runner/mdatp-quick-scan.sh
+      register: scan_result
+
+    - name: Display scan output
+      debug:
+        var: scan_result.stdout
+
+    - name: Fail if scan failed
+      fail:
+        msg: "mdatp quick scan failed"
+      when: scan_result.rc != 0
